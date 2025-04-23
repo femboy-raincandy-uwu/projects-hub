@@ -1,0 +1,101 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background-color: #1a1a1a;
+    color: white;
+  }
+  
+  a {
+    color: #ff00cc;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  a:hover {
+    color: #00ffcc;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Header Styles */
+  .header {
+    background: linear-gradient(45deg, #ff00cc, #00ccff);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .header h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin-top: 10px;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 20px;
+  }
+  
+  nav ul li a {
+    font-size: 1.5em;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  /* Section Styles */
+  section {
+    padding: 30px;
+    text-align: center;
+    background: #333;
+    margin: 20px 0;
+    border-radius: 8px;
+  }
+  
+  section h2 {
+    font-size: 2.5em;
+    color: #ff00cc;
+  }
+  
+  section p {
+    font-size: 1.2em;
+    color: white;
+    line-height: 1.6;
+  }
+  
+  /* Footer Styles */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    font-size: 0.9em;
+  }
+  
+  /* Scenecore-Specific Effects */
+  body {
+    background: linear-gradient(90deg, #ff00cc, #00ccff, #ffff00);
+    background-size: 400% 400%;
+    animation: gradientShift 5s ease infinite;
+  }
+  
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
