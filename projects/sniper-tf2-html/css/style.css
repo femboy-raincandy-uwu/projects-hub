@@ -1,0 +1,113 @@
+@font-face{
+    font-family: 'MyCustomFont';
+    src: url("../fonts/queering-font/queering.otf") format('opentype');
+}
+
+header{
+    background-color: darkred;
+    padding-top: 20px;
+    font-family: 'MyCustomFont';
+    src: url("../fonts/queering-font/Queering-but-with-different-t.otf") format('opentype');
+    font-family: 'MyCustomFont', sans-serif;
+    font-size: 100px;
+    letter-spacing: 3px;
+}
+
+header img{
+    max-height: 300px;
+    max-width: 300px;
+    border: 5px solid #000000;
+    border-radius: 50%;
+    margin-bottom: 10px
+}
+
+body{
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: 0px;
+    font-family: 'MyCustomFont', sans-serif;
+    @font-face{
+        font-family: 'MyCustomFont';
+        src: url("../fonts/queering-font/queering.otf") format('opentype');
+        font-family: 'MyCustomFont', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+            }
+}
+
+h2{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 75px;
+    letter-spacing: 2px;
+    background-color: darkred;
+}
+
+p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 50px;
+    letter-spacing: 1px;
+    max-width: 90%;
+    margin: 0 auto; /* this centers it horizontally */
+    text-align: center; /* this centers the text inside the box */
+}
+
+ul{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 50px;
+    letter-spacing: 1px;
+    text-align: center;
+    list-style-position: inside;
+}
+
+li{
+    font-size: 50px;
+    letter-spacing: 1px;
+    text-align: center;
+    list-style-position: inside;
+}
+
+a{
+    color:white
+}
+
+a:visited {
+    color: darkred;
+}
+
+a:hover {
+    color: pink;
+    background-color: transparent;
+  }
+
+.gif-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tenor-gif-embed {
+    width: 15%; /* Adjust the width as needed */
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* space between GIFs */
+    flex-wrap: wrap; /* optional, allows wrapping on small screens */
+  }
+  
+  .tenor-gif-embed {
+    width: 15%;
+    min-width: 200px;
+  }
+
+footer{
+    align-self: center;
+}

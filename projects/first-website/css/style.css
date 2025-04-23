@@ -1,0 +1,23 @@
+body {
+    background-color: black;
+}
+
+h1{
+    color:rgb(255, 0, 191);
+    text-transform: uppercase;
+    margin: auto;
+    font-size: 50px;
+    /* ^ idk size and colour */
+}
+h2{
+    color:rgb(163, 29, 29);
+    margin: auto;
+    font-size: 25px;
+}
+
+p{
+    color:rgb(255, 255, 255);
+    margin: auto;
+    font-size: 15px;
+}
+
