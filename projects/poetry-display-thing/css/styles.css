@@ -7,6 +7,36 @@ body {
   font-size: 2rem; /* doubled from 1rem */
 }
 
+/* CHROMIUM */
+/* Target the scrollbar track */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px; /* for horizontal scrollbars */
+}
+
+/* The background of the scrollbar track */
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 10px;
+}
+
+/* The draggable thumb */
+::-webkit-scrollbar-thumb {
+  background: #555; /*OR 555 */
+  border-radius: 10px;
+  border: 4px solid #1a1a1a; /* gives space around the thumb */
+}
+
+/* On hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+/* CHROMIUM */
+
+li, ul{
+  line-height: 160%;
+}
+
 /* Headings */
 h1 {
   font-size: 5rem; /* ~80px */
@@ -26,12 +56,12 @@ h1, h2, h3, h4, p {
 
 /* Links */
 a {
-  color: white;
+  color: rgb(255, 0, 183);
   font-size: 2rem;
 }
 
 a:visited {
-  color: rgb(255, 0, 183);
+  color: #ffa500;
 }
 
 /* Page Container */
@@ -49,7 +79,7 @@ a:visited {
 .header {
   font-size: 3.2rem;
   font-weight: 600;
-  color: #e3e3e3;
+  color: #ffa500;
   background-color: #121212;
   padding: 1rem;
   border-radius: 10%;
@@ -66,17 +96,16 @@ a:visited {
 /* Columns */
 .column, .columnmiddle {
   flex: 1;
-  min-width: 500px;
-  border-radius: 20px;
-  transition: transform 0.2s ease;
+  min-width: 35%;
+  height: auto; /* allow natural height */
+  overflow: visible; /* allow content to expand */
 }
 
 .column {
   background-color: #1f1f1f;
   padding: 3rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  max-height: 800px;
-  overflow-y: auto;
+  overflow: visible;
 }
 
 .column:hover {
@@ -108,7 +137,7 @@ a:visited {
 .sub-column h3 {
   margin-top: 0;
   font-size: 2.2rem;
-  color: #ffd369;
+  color: #ffa500;
   border-bottom: 2px solid #444;
   padding-bottom: 1rem;
   margin-bottom: 1.5rem;
@@ -144,3 +173,97 @@ a:visited {
 .animated-text {
   animation: colour-cycle 7s infinite;
 }
+
+.poet-photo-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  
+  
+}
+
+.poet-photo {
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 1 / 1; /* ensures it's always a square */
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffa500;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+
+
+.extra-info {
+  margin-top: 3rem;
+  background-color: #2a2a2a;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  color: #ccc;
+  font-size: 1.9rem;
+  height: 100%;
+
+}
+
+
+
+
+/* This makes sure other columns don't force it shorter */
+.dashboard-columns {
+  height: auto; /* makes all columns stretch equally if needed */
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.page.dashboard {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  flex: 1;
+  height: 100%;
+
+}
+
+/* Let each column grow vertically with its content */
+.column {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+}
+
+/* Optional: adjust this for the right column */
+.columnmiddle {
+  max-width: 300px;
+  height: 100%;
+
+}
+
+/* Image responsiveness */
+.poet-photo {
+  width: 100%;
+  height: 100%;
+}
+
+.column.poet-info {
+
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+

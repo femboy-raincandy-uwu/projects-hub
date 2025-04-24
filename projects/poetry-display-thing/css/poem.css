@@ -1,0 +1,313 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0d0d0d;
+    color: #f2f2f2;
+    text-align: center;
+    font-size: 2rem; /* doubled from 1rem */
+    overflow: hidden; /* disables scroll */
+
+  }
+  
+  /* CHROMIUM */
+  /* Target the scrollbar track */
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px; /* for horizontal scrollbars */
+  }
+  
+  /* The background of the scrollbar track */
+  ::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 10px;
+  }
+  
+  /* The draggable thumb */
+  ::-webkit-scrollbar-thumb {
+    background: #555; /*OR 555 */
+    border-radius: 10px;
+    border: 4px solid #1a1a1a; /* gives space around the thumb */
+  }
+  
+  /* On hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #888;
+  }
+  /* CHROMIUM */
+  
+  li, ul{
+    line-height: 160%;
+  }
+  
+  /* Headings */
+  h1 {
+    font-size: 5rem; /* ~80px */
+  }
+  
+  h2 {
+    font-size: 4rem;
+    color:#ffa500;
+  }
+  
+  h3 {
+    font-size: 2.8rem;
+  }
+  
+  h1, h2, h3, h4, p {
+    text-align: center;
+  }
+  
+  /* Links */
+  a {
+    color: rgb(255, 0, 183);
+    font-size: 2rem;
+  }
+  
+  a:visited {
+    color: #ffa500;
+  }
+  
+  /* Page Container */
+  .page.dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3rem;
+    background: linear-gradient(145deg, #1a1a1a, #141414);
+    border-radius: 24px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Header */
+  .header {
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: #ffa500;
+    background-color: #121212;
+    padding: 1rem;
+    border-radius: 10%;
+    box-shadow: inset 0 0 20px #000000;
+  }
+  
+  /* Dashboard Layout */
+  .dashboard-columns {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+  
+  /* Columns */
+  .column, .columnmiddle {
+    flex: 1;
+    min-width: 35%;
+    height: 954.547px; /* allow natural height */
+    overflow: visible; /* allow content to expand */
+  }
+  
+  .column {
+    background-color: #1f1f1f;
+    padding: 3rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    overflow: visible;
+  }
+  
+  .column:hover {
+    transform: translateY(-10px);
+  }
+  
+  .column h3 {
+    margin-top: 0;
+    color: #ffa500;
+    font-size: 2.8rem;
+  }
+  
+  .column p {
+    color: #ccc;
+    font-size: 1.9rem;
+    line-height: 1.6;
+}
+
+  /* Sub-columns */
+.sub-column {
+    background-color: #2a2a2a;
+    padding: 1.5rem;
+    border-radius: 16px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.sub-column h3 {
+    margin-top: 0;
+    font-size: 2.2rem;
+    color: #ffa500;
+    border-bottom: 2px solid #444;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.sub-column img {
+    width: 50%;
+    max-width: 400px;
+    height: 10%;
+    border-radius: 8px;
+    margin-top: -2%;
+
+}
+
+.page.dashboard {
+    padding-top: 1rem; /* reduced from 3rem */
+    padding-right: 3rem;
+    padding-bottom: 1%;
+    padding-left: 3rem;
+}
+
+@keyframes colour-cycle {
+    0%   { color: rgb(7, 141, 112); }
+    16%  { color: rgb(38, 206, 170); }
+    33%  { color: rgb(152, 232, 193); }
+    50%  { color: rgb(255, 255, 255); }
+    66%  { color: rgb(123, 173, 226); }
+    83%  { color: rgb(80, 73, 204); }
+    100% { color: rgb(61, 26, 120); }
+}
+
+
+.animated-text {
+    animation: colour-cycle 7s infinite;
+}
+
+.poet-photo-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    
+    
+}
+
+.poet-photo {
+    width: 100%;
+    max-width: 350px;
+    aspect-ratio: 1 / 1; /* ensures it's always a square */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffa500;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.extra-info {
+    padding: 2rem;
+    border-radius: 16px;
+    color: #ccc;
+    font-size: 1.9rem;
+    background-color: #2a2a2a;
+
+}
+
+  /* This makes sure other columns don't force it shorter */
+.dashboard-columns {
+    height: auto; /* makes all columns stretch equally if needed */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.page.dashboard {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    flex: 1;
+    height: 100%;
+
+}
+
+  /* Let each column grow vertically with its content */
+.column {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    max-height: 62rem;       /* or however tall you want it */
+
+}
+
+.columnmiddle {
+    max-height: 62rem;       /* or however tall you want it */
+    overflow-y: auto;       /* enable vertical scrolling */
+    padding-right: 0.5rem;  /* gives room for scrollbar */
+    display: flex;
+}
+
+  /* Image responsiveness */
+.poet-photo {
+    width: 100%;
+    height: 100%;
+}
+
+.column.poet-info {
+
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    background-color: #121212;
+    border-radius: 10px;
+    box-shadow: inset 0 0 20px #000000;
+    position: relative;
+}
+
+.header-wrapper {
+    flex: 1;
+    text-align: center;
+    pointer-events: none; /* prevent it from blocking clicks */
+}
+
+.header {
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: #ffa500;
+    margin: 0;
+    background: none;
+    box-shadow: none;
+}
+
+.return-button {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #fff;
+    background: #2a2a2a;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.return-button:hover {
+    background: #2a2a2a;
+    transform: scale(1.05);
+}
+
+.spacer {
+    width: 10rem; /* ensures the center stays centered */
+}
