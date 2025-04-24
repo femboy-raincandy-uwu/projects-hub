@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d0d0d;
+  color: #f2f2f2;
+  text-align: center;
+  font-size: 2rem; /* doubled from 1rem */
+}
+
+/* Headings */
+h1 {
+  font-size: 5rem; /* ~80px */
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+
+h1, h2, h3, h4, p {
+  text-align: center;
+}
+
+/* Links */
+a {
+  color: white;
+  font-size: 2rem;
+}
+
+a:visited {
+  color: rgb(255, 0, 183);
+}
+
+/* Page Container */
+.page.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 3rem;
+  background: linear-gradient(145deg, #1a1a1a, #141414);
+  border-radius: 24px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Header */
+.header {
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #e3e3e3;
+  background-color: #121212;
+  padding: 1rem;
+  border-radius: 10%;
+  box-shadow: inset 0 0 20px #000000;
+}
+
+/* Dashboard Layout */
+.dashboard-columns {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+/* Columns */
+.column, .columnmiddle {
+  flex: 1;
+  min-width: 500px;
+  border-radius: 20px;
+  transition: transform 0.2s ease;
+}
+
+.column {
+  background-color: #1f1f1f;
+  padding: 3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  max-height: 800px;
+  overflow-y: auto;
+}
+
+.column:hover {
+  transform: translateY(-10px);
+}
+
+.column h3 {
+  margin-top: 0;
+  color: #ffa500;
+  font-size: 2.8rem;
+}
+
+.column p {
+  color: #ccc;
+  font-size: 1.9rem;
+  line-height: 1.6;
+}
+
+/* Sub-columns */
+.sub-column {
+  background-color: #2a2a2a;
+  padding: 1.5rem;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.sub-column h3 {
+  margin-top: 0;
+  font-size: 2.2rem;
+  color: #ffd369;
+  border-bottom: 2px solid #444;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.sub-column img {
+  width: 50%;
+  max-width: 400px;
+  height: 10%;
+  border-radius: 8px;
+  margin-top: -2%;
+
+}
+
+.page.dashboard {
+  padding-top: 1rem; /* reduced from 3rem */
+  padding-right: 3rem;
+  padding-bottom: 1%;
+  padding-left: 3rem;
+}
+
+@keyframes colour-cycle {
+  0%   { color: rgb(7, 141, 112); }
+  16%  { color: rgb(38, 206, 170); }
+  33%  { color: rgb(152, 232, 193); }
+  50%  { color: rgb(255, 255, 255); }
+  66%  { color: rgb(123, 173, 226); }
+  83%  { color: rgb(80, 73, 204); }
+  100% { color: rgb(61, 26, 120); }
+}
+
+
+.animated-text {
+  animation: colour-cycle 7s infinite;
+}
