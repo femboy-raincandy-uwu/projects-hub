@@ -311,3 +311,50 @@ body, html {
 .spacer {
     width: 10rem; /* ensures the center stays centered */
 }
+
+.svg-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem auto;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+.icon-text {
+  font-size: 2rem;
+  color: #ffa500;
+}
+
+.tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 300px;
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* position above the image */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 1.4rem;
+}
+
+.tooltip-wrapper:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
